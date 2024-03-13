@@ -1,6 +1,6 @@
 package exercises.java8.lambdas;
 
-// @FunctionalInterface
+@FunctionalInterface
 public interface Calculator {
-//    int calculate(int a, int b);
+    int calculate(int a, int b);
 }

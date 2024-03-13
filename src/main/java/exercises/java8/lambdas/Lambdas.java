@@ -21,9 +21,8 @@ public class Lambdas {
     }
 
     /**
-     * 1. Create a Functional Interface "Calculator". It should take 2 integers and return and integer as well.
-     * 2. Next, return an implementation of Calculator in this method.
-     *    It should take the 2 integers and return the sum.
+     *  return an implementation of functional interface Calculator in this method.
+     *  It should take the 2 integers and return the sum.
      */
     public Calculator implementAFunctionalInterface() {
         // return (a,b) -> a+b;
