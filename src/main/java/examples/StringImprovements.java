@@ -1,4 +1,4 @@
-package java11;
+package examples;
 
 public class StringImprovements {
     public void lines() {

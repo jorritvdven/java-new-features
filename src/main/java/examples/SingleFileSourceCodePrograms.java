@@ -1,4 +1,4 @@
-package java11;
+package examples;
 
 import java.util.List;
 

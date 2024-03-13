@@ -1,5 +1,8 @@
-package java8.streams;
+package exercises.java8.streams;
 
+/**
+ * Used for the exercises
+ */
 public class Employee {
     private final String name;
     private final int age;

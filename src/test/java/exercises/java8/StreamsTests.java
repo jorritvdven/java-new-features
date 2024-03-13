@@ -1,6 +1,7 @@
-package java8;
+package exercises.java8;
 
-import java8.streams.Employee;
+import exercises.java8.streams.Employee;
+import exercises.java8.streams.Streams;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -8,8 +9,9 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
-public class Streams {
+public class StreamsTests {
     private List<Employee> employees = List.of(
             new Employee("Jorrit", 37),
             new Employee("Henk", 30),
@@ -19,18 +21,15 @@ public class Streams {
             new Employee("Mohammed", 42)
     );
 
+    private Streams subject = new Streams();
+
     /**
      * Convert the list of employees into an alphabetically sorted list of names.
      */
     @Test
     public void sortByName() {
-        List<String> names = employees.stream()
-                .map(e -> e.getName())
-                .sorted()
-                .collect(Collectors.toList());
-
         List<String> expected = List.of("Anne", "Henk", "Jan", "Jorrit", "Mohammed", "Piet");
-        assertEquals(expected, names);
+        assertEquals(expected, subject.sortByName(employees));
     }
 
     /**
@@ -38,12 +37,9 @@ public class Streams {
      */
     @Test
     public void findAllEmployeesWithALongName() {
-        List<Employee> result = employees.stream()
-                .filter(e -> e.getName().length() > 4)
-                .collect(Collectors.toList());
-
         Set<String> expected = Set.of("Jorrit", "Mohammed");
-        assertEquals(expected, result.stream().map(e -> e.getName()).collect(Collectors.toSet()));
+        Set<Employee> actual = subject.findAllEmployeesWithALongName(employees);
+        assertEquals(expected, actual.stream().map(Employee::getName).collect(Collectors.toSet()));
     }
 
     /**
@@ -51,12 +47,7 @@ public class Streams {
      */
     @Test
     public void calculateAverageAge() {
-        Double average = employees.stream()
-                .mapToInt(e -> e.getAge())
-                .average()
-                .getAsDouble();
-
-        assertEquals(32, Math.round(average));
+        assertEquals(32, Math.round(subject.calculateAverageAge(employees)));
     }
 
     /**
@@ -64,13 +55,7 @@ public class Streams {
      */
     @Test
     public void calculateAverageNameLength() {
-        Double average = employees.stream()
-                .map(e -> e.getName())
-                .mapToInt(e -> e.length())
-                .average()
-                .getAsDouble();
-
-        assertEquals(5, Math.round(average));
+        assertEquals(5, Math.round(subject.calculateAverageNameLength(employees)));
     }
 }
 

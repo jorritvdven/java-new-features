@@ -1,6 +1,5 @@
-package java8.streams;
+package examples;
 
-import java.util.Map;
 import java.util.Optional;
 
 public class OptionalExamples {
