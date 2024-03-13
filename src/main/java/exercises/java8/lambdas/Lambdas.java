@@ -26,8 +26,8 @@ public class Lambdas {
      */
     public Calculator implementAFunctionalInterface() {
         // return (a,b) -> a+b;
-        TODO("return an implementation (as a lambda) which calculates the sum om the 2 given integers.");
-        return null;
+
+        return TODO("return an implementation (as a lambda) which calculates the sum om the 2 given integers.");
     }
 
     /**
@@ -35,7 +35,6 @@ public class Lambdas {
      */
     public Calculator methodReference() {
         //return Integer::sum;
-        TODO("Complete the exercise");
-        return null;
+        return TODO("Complete the exercise");
     }
 }

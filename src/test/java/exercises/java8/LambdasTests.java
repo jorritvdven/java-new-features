@@ -12,7 +12,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class LambdasTests {
     private Lambdas subject = new Lambdas();
 
-
     @Test
     void replaceAnonymousClassWithLambda() {
         Map<String, Integer> names = new HashMap<>();
