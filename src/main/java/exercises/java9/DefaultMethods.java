@@ -11,9 +11,7 @@ public class DefaultMethods {
     public String addDefaultMethodToA(String name) {
         final A a = () -> "Hello world!";
 
-        TODO("Complete the exercise and uncomment the line below.");
-        return null;
-        //return a.sayHello(name);
+        return TODO("Complete the exercise and uncomment the line below.");;
     }
 
     /**
@@ -24,9 +22,7 @@ public class DefaultMethods {
     public String addDefaultMethodToB(String name) {
         final B b = () -> "Hello world!";
 
-        TODO("Complete the exercise and uncomment the line below.");
-        return null;
-        //return b.sayHello(name);
+        return TODO("Complete the exercise and uncomment the line below.");;
     }
 
     /**
@@ -37,9 +33,7 @@ public class DefaultMethods {
     public String multipleInheritance(String name) {
         final C c = new C();
 
-        TODO("Complete the exercise and uncomment the line below.");
-        return null;
-        //return c.sayHello(name);
+        return TODO("Complete the exercise and uncomment the line below.");;
     }
 
     class C implements A {
@@ -48,16 +42,4 @@ public class DefaultMethods {
             return "Hello, World!";
         }
     }
-
-//    class C implements A, B {
-//        @Override
-//        public String sayHello() {
-//            return "Hello, World!";
-//        }
-//
-//        @Override
-//        public String sayHello(String name) {
-//            return B.super.sayHello(name);
-//        }
-//    }
 }
