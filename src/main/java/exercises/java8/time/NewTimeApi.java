@@ -16,16 +16,14 @@ public class NewTimeApi {
       * Return the day after 2024-2-28
       */
     public LocalDate nextDay() {
-        //return LocalDate.of(2024, 2, 28).plusDays(1);
-        return TODO("Return the day after 2024-2-28");
+        return LocalDate.of(2024, 2, 28).plusDays(1);
     }
 
     /**
      * Which day of the week is 2024-2-29?
      */
     public DayOfWeek dayOfWeek() {
-        //return LocalDate.of(2024, 2, 29).getDayOfWeek();
-        return TODO("find the 'DayOfWeek' of 2024-2-29");
+        return LocalDate.of(2024, 2, 29).getDayOfWeek();
     }
 
     /**
@@ -33,25 +31,22 @@ public class NewTimeApi {
      * Which day of the week was that?
      */
     public DayOfWeek epochDayOfWeek() {
-        Instant epoch = TODO("create an Instant of the Unix epoch");
-        return TODO("return the DayOfWeek");
+        Instant epoch = Instant.ofEpochSecond(0);
 
-//        return ZonedDateTime.ofInstant(epoch, ZoneOffset.UTC)
-//                .getDayOfWeek();
+        return ZonedDateTime.ofInstant(epoch, ZoneOffset.UTC)
+                .getDayOfWeek();
     }
 
     /**
      * How many days are there between Christmas in 2023 and Easter in 2024?
      */
     public long daysBetweenChristmasAndEaster() {
-        return TODO("calculate the number of days");
+        LocalDateTime christmas = LocalDate.of(2023, 12, 24)
+                .atStartOfDay();
 
-//        LocalDateTime christmas = LocalDate.of(2023, 12, 24)
-//                .atStartOfDay();
-//
-//        LocalDateTime easter = LocalDate.of(2024, 3, 31)
-//                .atStartOfDay();
-//
-//        return Duration.between(christmas, easter).toDays();
+        LocalDateTime easter = LocalDate.of(2024, 3, 31)
+                .atStartOfDay();
+
+        return Duration.between(christmas, easter).toDays();
     }
 }
