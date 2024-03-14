@@ -11,7 +11,7 @@ public class DefaultMethods {
     public String addDefaultMethodToA(String name) {
         final A a = () -> "Hello world!";
 
-        return TODO("Complete the exercise and uncomment the line below.");;
+        return TODO("Complete the exercise and uncomment the line below.");
     }
 
     /**
@@ -22,7 +22,7 @@ public class DefaultMethods {
     public String addDefaultMethodToB(String name) {
         final B b = () -> "Hello world!";
 
-        return TODO("Complete the exercise and uncomment the line below.");;
+        return TODO("Complete the exercise and uncomment the line below.");
     }
 
     /**
@@ -33,7 +33,7 @@ public class DefaultMethods {
     public String multipleInheritance(String name) {
         final C c = new C();
 
-        return TODO("Complete the exercise and uncomment the line below.");;
+        return TODO("Complete the exercise and uncomment the line below.");
     }
 
     class C implements A {
