@@ -25,7 +25,7 @@ class StructuredConcurrencyTest {
     }
 
     @Test
-    void parallelTasksSturcturedConcurrency() {
+    void parallelTasksStructuredConcurrency() {
         verify(subject::parallelTasksStructuredConcurrency);
     }
 

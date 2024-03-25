@@ -31,6 +31,6 @@ class StringTemplateExpressionsTest {
 
     @Test
     void convertToStringTemplateExpressionFMT() {
-        assertEquals(expected, subject.convertToStringTemplateExpressionSTR(name, unsubscribeCode, temperature));
+        assertEquals(expected, subject.convertToStringTemplateExpressionFMT(name, unsubscribeCode, temperature));
     }
 }
